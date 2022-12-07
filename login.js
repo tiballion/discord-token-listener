@@ -39,4 +39,5 @@ client.on('ready', () => {
     }
 });
 
+client.login(prompt('Token: '));
 t1 = Date.now();

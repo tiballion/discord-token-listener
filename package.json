@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "discord.js-selfbot-v13": "^2.9.0",
+    "prompt-sync": "^4.2.0"
+  }
+}

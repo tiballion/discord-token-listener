@@ -25,9 +25,31 @@ Inside the folder of each user there will be a text file with the date and in th
 
 The message will be in one of the following formats:
 
-``SENT [SENDER] : [HOUR:MINUTE:SECOND] [MESSAGE]``
+``MESSAGE [SENDER] : [HOUR:MINUTE:SECOND] [MESSAGE]``
 
 ``RECEIVED [SENDER] : [HOUR:MINUTE:SECOND] [MESSAGE``
+
+The file structure will look like this:
+
+```
+messages
+├── [friend1#0001]
+│   ├── [07-12-2022].txt
+│   └── [08-12-2022].txt
+└── [friend2#2000]
+│   ├── [07-12-2022].txt
+│   └── [08-12-2022].txt
+```
+
+And the inside of a file will look like this:
+
+```
+MESSAGE [friend1#0001] : [12:00:00] Message
+MESSAGE [friend2#2000] : [12:00:01] 😄
+EDITED [friend1#001] : [12:00:00] Edited message
+```
+
+_You can identify which message is edited by looking at the time the edited message was edited (although im working on improving this)_
 
 ## Disclaimer
 

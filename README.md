@@ -1,7 +1,7 @@
 # discord-token-listener
 
 A program that uses a discord token to logs all DM messages into text files.
-
+_This program uses a modified version of the class js discord bot library in order for it to be able to run on non-bot accounts._
 
 ## How to use
 

@@ -69,9 +69,6 @@ class Message {
      * The file is named after the date of the message and is placed in a folder named after the channel.
      */
     writeFile(edit = false) {
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // check si y'a des attachments, si oui afficher le name et l'url
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         let messageFolder = path.join(__dirname, 'messages');
         // Checks if the folder of the user exists
         let userFolder = path.join(messageFolder, `${this.recipient.username}#${this.recipient.discriminator}`);
@@ -94,7 +91,7 @@ class Message {
         }
         // Writes the message into the file
         let messageTime = this.date.split(' ')[1];
-        let message = edit ? 'EDITED ' : 'SENT ';
+        let message = edit ? 'EDITED ' : 'MESSAGE ';
         message += `${this.author.username} : ${messageTime} - ${this.content} \n`;
         if (this.attachments.size > 0) {
             this.attachments.forEach(attachment => {
